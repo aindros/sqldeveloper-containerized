@@ -12,7 +12,7 @@ clean:
 
 run:
 	[ ! -d "${CONFIG}" ] && mkdir -p ${CONFIG}
-	${DOCKER} run -it --rm \
+	${DOCKER} run -it \
 		-v ${CONFIG}:/root \
 		-v ${XAUTHORITY}:${XAUTHORITY}:ro \
 		-v ${XSOCK}:${XSOCK}:ro \
