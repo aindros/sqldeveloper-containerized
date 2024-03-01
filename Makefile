@@ -13,6 +13,7 @@ clean:
 run:
 	[ ! -d "${CONFIG}" ] && mkdir -p ${CONFIG}
 	${DOCKER} run -it \
+		--name sqldeveloper \
 		-v ${CONFIG}:/root \
 		-v ${XAUTHORITY}:${XAUTHORITY}:ro \
 		-v ${XSOCK}:${XSOCK}:ro \
